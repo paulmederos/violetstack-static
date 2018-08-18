@@ -62,30 +62,33 @@ export default class App extends React.Component {
               <h3>The team</h3>
               <ul className="team-list">
                 <li className="team-item">
-                  <a href="https://www.linkedin.com/in/pmederos/" className="team-link">
+                  <a href="https://www.linkedin.com/in/pmederos/" className="team-link" target="blank">
                     <div className="avatar avatar-paul"></div>
                     <p className="team-person">
                       <b>Paul Mederos</b><br />
                       <span className="subtle-text">Design Partner</span>
                     </p>
+                    <div className="icon-arrow"></div>
                   </a>
                 </li>
                 <li className="team-item">
-                  <a href="https://www.linkedin.com/in/kbeddingfield/" className="team-link">
+                  <a href="https://www.linkedin.com/in/kbeddingfield/" className="team-link" target="blank">
                     <div className="avatar avatar-kevin"></div>
                     <p className="team-person">
                       <b>Kevin Beddingfield</b><br />
                       <span className="subtle-text">Engineering Partner</span>
                     </p>
+                    <div className="icon-arrow"></div>
                   </a>
                 </li>
                 <li className="team-item">
-                  <a href="https://www.linkedin.com/in/csalvato/" className="team-link">
+                  <a href="https://www.linkedin.com/in/csalvato/" className="team-link" target="blank">
                     <div className="avatar avatar-chris"></div>
                     <p className="team-person">
                       <b>Chris Salvato</b><br />
                       <span className="subtle-text">Product Partner</span>
                     </p>
+                    <div className="icon-arrow"></div>
                   </a>
                 </li>
               </ul>
@@ -94,7 +97,12 @@ export default class App extends React.Component {
 
         </div>
         <footer className="footer">
-
+          <p className="footer-copy">
+            Currently <b>accepting clients</b> — for September 2018.
+          </p>
+          <a href="http://calendly.com/pvm/25m-open-session" className="footer-button" target="blank">
+            Schedule a discovery call &rarr;
+          </a>
         </footer>
       </div>
     )

@@ -1626,9 +1626,18 @@ figure {
   display: block;
   width: 180px;
   height: 48px;
+  background-color: transparent;
+  margin: 64px 0;
+  background-image: url("../images/logo-deck@2x.png");
+  background-position: center center;
+  background-size: 180px 48px;
+  box-shadow: 0px 3px 18px rgba(72, 58, 237, 0.3);
   border-radius: 24px;
-  background-color: #682CF4;
-  margin: 64px 0; }
+  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .logo-mark:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 21px rgba(72, 58, 237, 0.5);
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
   @media (max-width: 54em) {
     .logo-mark {
       width: 120px;
@@ -1656,7 +1665,8 @@ figure {
 .half-of-grid {
   display: flex;
   width: 50%;
-  flex-flow: column; }
+  flex-flow: column;
+  padding-bottom: 12rem; }
   @media (max-width: 30em) {
     .half-of-grid {
       width: 100%; } }
@@ -1666,7 +1676,12 @@ figure {
   padding: 6.4rem;
   width: 92%;
   margin-bottom: 8%;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05); }
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .thing-card:hover {
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
   @media (max-width: 30em) {
     .thing-card {
       margin: 3% auto;
@@ -1708,17 +1723,50 @@ figure {
   border-radius: 50%;
   background-color: #ccc;
   margin-bottom: 0;
-  margin-right: 2.1rem; }
+  margin-right: 2.1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 54px 54px; }
+  .avatar.avatar-paul {
+    background-image: url("../images/avatar-paul@2x.png"); }
+  .avatar.avatar-kevin {
+    background-image: url("../images/avatar-kevin@2x.png"); }
+  .avatar.avatar-chris {
+    background-image: url("../images/avatar-chris@2x.png"); }
+
+.icon-arrow {
+  display: block;
+  width: 14px;
+  height: 28px;
+  background-image: url("../images/icon-arrow@2x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 14px 28px;
+  margin-left: auto; }
 
 .team-person {
   margin-bottom: 0; }
 
 .footer {
-  position: relative;
-  margin-top: 8.8rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
   width: 100%;
   background-color: white;
   display: block;
-  height: 100px; }
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+
+.footer-copy {
+  margin-right: auto;
+  margin-bottom: 0;
+  padding-left: 4%; }
+
+.footer-button {
+  margin-left: auto;
+  padding-right: 4%; }
 
 /*# sourceMappingURL=styles.css.map */

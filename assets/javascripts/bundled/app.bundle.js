@@ -21328,7 +21328,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 { className: "team-item" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "a",
-                  { href: "https://www.linkedin.com/in/pmederos/", className: "team-link" },
+                  { href: "https://www.linkedin.com/in/pmederos/", className: "team-link", target: "blank" },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "avatar avatar-paul" }),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "p",
@@ -21344,7 +21344,8 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                       { className: "subtle-text" },
                       "Design Partner"
                     )
-                  )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "icon-arrow" })
                 )
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -21352,7 +21353,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 { className: "team-item" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "a",
-                  { href: "https://www.linkedin.com/in/kbeddingfield/", className: "team-link" },
+                  { href: "https://www.linkedin.com/in/kbeddingfield/", className: "team-link", target: "blank" },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "avatar avatar-kevin" }),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "p",
@@ -21368,7 +21369,8 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                       { className: "subtle-text" },
                       "Engineering Partner"
                     )
-                  )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "icon-arrow" })
                 )
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -21376,7 +21378,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 { className: "team-item" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "a",
-                  { href: "https://www.linkedin.com/in/csalvato/", className: "team-link" },
+                  { href: "https://www.linkedin.com/in/csalvato/", className: "team-link", target: "blank" },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "avatar avatar-chris" }),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "p",
@@ -21392,14 +21394,34 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                       { className: "subtle-text" },
                       "Product Partner"
                     )
-                  )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "icon-arrow" })
                 )
               )
             )
           )
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("footer", { className: "footer" })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "footer",
+        { className: "footer" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "p",
+          { className: "footer-copy" },
+          "Currently ",
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "b",
+            null,
+            "accepting clients"
+          ),
+          " \u2014 for September 2018."
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "a",
+          { href: "http://calendly.com/pvm/25m-open-session", className: "footer-button", target: "blank" },
+          "Schedule a discovery call \u2192"
+        )
+      )
     );
   }
 }

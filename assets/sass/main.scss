@@ -22,11 +22,11 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  font-family: $primary_font_stack;
+  font-family: $font_stack;
   font-size: 1.7rem;
   line-height: 1.45;
-  color: $primary_font_color;
-  @include font-smoothing();
+  color: $color_body;
+  background-color: #fafafa;
 }
 
 ::-moz-selection { background: #D6EDFF; }
@@ -39,24 +39,24 @@ h4, h5, h6 {
   -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  color: $primary_font_color;
+  color: $color_title;
   line-height: 1.15em;
   margin: 0 0 0.3em 0;
-  font-family: $header_font_stack;
 }
 
 h1, h2 {
-  font-size: 2.8rem;
+  font-size: 5.2rem;
   margin-bottom:1em;
-  color: #333;
+  color: $color_title;
   line-height: 1.2;
   font-feature-settings: normal;
+  font-weight: 900;
 }
 
 h3 {
   font-size:2.1rem;
   font-weight: 700;
-  margin-bottom:1em;
+  margin-bottom:4rem;
   font-feature-settings: normal;
 }
 
@@ -67,7 +67,6 @@ h4 {
 h5 {
   color: rgba(0,0,0,.3);
   font-size: 1.4rem;
-  font-family: $primary_font_stack;
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: 1rem;
@@ -78,14 +77,14 @@ h6 {
 }
 
 a {
-  color: $primary_font_color;
+  color: $color_body;
   transition: color ease 0.3s;
   text-decoration: underline;
   font-weight: 600;
 }
 
 a:hover {
-  color: $color_enchant;
+  color: $color_violet;
   text-decoration: underline;
 }
 
@@ -297,3 +296,131 @@ figure {
 /* ==========================================================================
     3. App Components - Styles specific to this app
 ========================================================================== */
+
+.content {
+  max-width: 1070px;
+  width: 94%;
+  margin:0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-mark {
+  display: block;
+  width: 180px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: $color_violet;
+  margin: 64px 0;
+
+  @include mq-tablet {
+    width: 120px;
+    height: 36px;
+  }
+
+  @include mq-personal {
+    margin: 32px auto 64px;
+  }
+}
+
+.title {
+  margin-bottom: 8.8rem;
+
+  @include mq-tablet {
+    font-size: 3.8rem;
+  }
+
+  @include mq-personal {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+}
+
+.grid-of-things {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.half-of-grid {
+  display: flex;
+  width: 50%;
+  flex-flow: column;
+
+  @include mq-personal {
+    width: 100%;
+  }
+}
+
+.thing-card {
+  background-color: white;
+  padding: 6.4rem;
+  width: 92%;
+  margin-bottom: 8%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+
+
+  @include mq-personal {
+    margin: 3% auto;
+    padding: 4.4rem 3.2rem 3.2rem;
+  }
+}
+
+.capabilities-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  line-height: 2.4;
+}
+
+.team-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.team-item {
+  display: block;
+  margin-left: -1.8rem;
+  margin-bottom: 2.2rem;
+}
+
+.team-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  @include transition;
+
+  &:hover {
+    background-color: transparentize($color_violet, .96);
+    text-decoration: none;
+    @include transition;
+  }
+}
+
+.avatar {
+  display: block;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-bottom: 0;
+  margin-right: 2.1rem;
+}
+
+.team-person {
+  margin-bottom: 0;
+}
+
+.footer {
+  position: relative;
+  margin-top: 8.8rem;
+  width: 100%;
+  background-color: rgba(255,255,255,1);
+  display: block;
+  height: 100px;
+}

@@ -2,24 +2,29 @@
  0. Core - CSS Variables, Mixins, and Utilities
  ========================================================================== */
 @font-face {
-  font-family: 'Inter UI';
-  src: font-url("./assets/webfonts/Inter-UI-Regular.otf") format("opentype");
+  font-family: 'Source Sans Pro';
+  src: font-url("./assets/webfonts/SourceSansPro-Regular.otf") format("opentype");
   font-weight: 500;
   font-style: normal; }
 @font-face {
-  font-family: 'Inter UI';
-  src: font-url("./assets/webfonts/Inter-UI-RegularItalic.otf") format("opentype");
+  font-family: 'Source Sans Pro';
+  src: font-url("./assets/webfonts/SourceSansPro-Italic.otf") format("opentype");
   font-weight: 500;
   font-style: italic; }
 @font-face {
-  font-family: 'Inter UI';
-  src: font-url("./assets/webfonts/Inter-UI-Medium.otf") format("opentype");
+  font-family: 'Source Sans Pro';
+  src: font-url("./assets/webfonts/SourceSansPro-Semibold.otf") format("opentype");
   font-weight: 600;
   font-style: normal; }
 @font-face {
-  font-family: 'Inter UI';
-  src: font-url("./assets/webfonts/Inter-UI-Bold.otf") format("opentype");
+  font-family: 'Source Sans Pro';
+  src: font-url("./assets/webfonts/SourceSansPro-Bold.otf") format("opentype");
   font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: font-url("./assets/webfonts/SourceSansPro-Black.otf") format("opentype");
+  font-weight: 900;
   font-style: normal; }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -1369,12 +1374,11 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  font-family: "Inter UI", "San Francisco", "Roboto", "Droid Sans", sans-serif;
+  font-family: "Source Sans Pro", "San Francisco", "Roboto", "Droid Sans", sans-serif;
   font-size: 1.7rem;
   line-height: 1.45;
-  color: #2D2333;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
+  color: #4a4a4a;
+  background-color: #fafafa; }
 
 ::-moz-selection {
   background: #D6EDFF; }
@@ -1389,22 +1393,22 @@ h4, h5, h6 {
   -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  color: #2D2333;
+  color: #682CF4;
   line-height: 1.15em;
-  margin: 0 0 0.3em 0;
-  font-family: "Bookmania", "Georgia", serif; }
+  margin: 0 0 0.3em 0; }
 
 h1, h2 {
-  font-size: 2.8rem;
+  font-size: 5.2rem;
   margin-bottom: 1em;
-  color: #333;
+  color: #682CF4;
   line-height: 1.2;
-  font-feature-settings: normal; }
+  font-feature-settings: normal;
+  font-weight: 900; }
 
 h3 {
   font-size: 2.1rem;
   font-weight: 700;
-  margin-bottom: 1em;
+  margin-bottom: 4rem;
   font-feature-settings: normal; }
 
 h4 {
@@ -1413,7 +1417,6 @@ h4 {
 h5 {
   color: rgba(0, 0, 0, 0.3);
   font-size: 1.4rem;
-  font-family: "Inter UI", "San Francisco", "Roboto", "Droid Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: 1rem; }
@@ -1422,13 +1425,13 @@ h6 {
   font-size: 1.2rem; }
 
 a {
-  color: #2D2333;
+  color: #4a4a4a;
   transition: color ease 0.3s;
   text-decoration: underline;
   font-weight: 600; }
 
 a:hover {
-  color: #E91F64;
+  color: #682CF4;
   text-decoration: underline; }
 
 p, ul, ol, dl {
@@ -1609,579 +1612,113 @@ figure {
 /* ==========================================================================
     2. Utilities - These things get used a lot
 ========================================================================== */
-/* Clears shit */
-.group:before,
-.group:after {
-  content: " ";
-  display: table; }
-
-.group:after {
-  clear: both; }
-
-.group {
-  *zoom: 1; }
-
-/* Hides shit */
-.hidden {
-  text-indent: -9999px;
-  visibility: hidden;
-  display: none; }
-
-/* Creates a responsive wrapper that makes our content scale nicely */
-.inner {
-  position: relative;
-  width: 80%;
-  max-width: 780px;
-  margin: 0 auto; }
-
-/* Centres vertically yo. (IE8+) */
-.vertical {
-  display: table-cell;
-  vertical-align: middle; }
-
-.centered {
-  text-align: center;
-  margin: inherit auto; }
-
-/*  =======================
-    Components
-=========================== */
-.wrap {
-  width: 92%;
-  max-width: 800px;
+/* ==========================================================================
+    3. App Components - Styles specific to this app
+========================================================================== */
+.content {
+  max-width: 1070px;
+  width: 94%;
   margin: 0 auto;
   position: relative;
   z-index: 1; }
 
-.mid-wrap {
-  max-width: 588px; }
+.logo-mark {
+  display: block;
+  width: 180px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: #682CF4;
+  margin: 64px 0; }
+  @media (max-width: 54em) {
+    .logo-mark {
+      width: 120px;
+      height: 36px; } }
+  @media (max-width: 30em) {
+    .logo-mark {
+      margin: 32px auto 64px; } }
 
-/* ==========================================================================
-    3. App Components - Styles specific to this app
-========================================================================== */
-/*  =======================
-    Portfolio index
-=========================== */
 .title {
-  padding-top: 12rem;
-  margin-bottom: 12rem;
-  position: relative; }
-  .title h2 {
-    position: relative; }
-  .title h2::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -1em;
-    top: -1rem;
-    width: 4px;
-    height: 12rem;
-    background-color: #E91F64;
-    border-radius: 2px; }
+  margin-bottom: 8.8rem; }
+  @media (max-width: 54em) {
+    .title {
+      font-size: 3.8rem; } }
+  @media (max-width: 30em) {
+    .title {
+      font-size: 2.8rem;
+      text-align: center; } }
 
-@media (max-width: 30em) {
-  .headshots-container {
-    position: relative;
-    top: -6em;
-    left: -4em;
-    height: 10em; } }
-
-.headshot {
-  width: 165px;
-  border: 4px solid white;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  transform: rotate(4deg);
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .headshot.first {
-    z-index: 3;
-    top: 4em;
-    right: 2em;
-    transform: rotate(3deg); }
-    .headshot.first:hover {
-      transform: rotate(1deg) scale(1.06); }
-  .headshot.second {
-    z-index: 2;
-    top: 1em;
-    right: -4em;
-    transform: rotate(18deg); }
-    .headshot.second:hover {
-      transform: rotate(12deg) scale(1.1); }
-  .headshot.third {
-    right: 7em;
-    top: 1em;
-    transform: rotate(-5deg); }
-    .headshot.third:hover {
-      transform: rotate(-7deg) scale(1.06); }
-  .headshot:hover {
-    z-index: 4;
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-
-.brief-resume {
-  list-style: none;
-  margin-top: 12rem;
-  margin-bottom: 18rem;
-  padding: 0; }
-  .brief-resume li {
-    margin-bottom: 1.2rem; }
-    @media (max-width: 30em) {
-      .brief-resume li {
-        margin-bottom: 2.5em; } }
-  .brief-resume li:nth-child(2) {
-    color: rgba(45, 35, 51, 0.65); }
-  .brief-resume li:nth-child(3) {
-    color: rgba(45, 35, 51, 0.55); }
-  .brief-resume li:nth-child(4) {
-    color: rgba(45, 35, 51, 0.4); }
-  .brief-resume li a {
-    color: inherit; }
-  .brief-resume li a:hover {
-    color: #E91F64; }
-
-.time-space-continuum {
-  width: 16rem;
-  display: inline-block; }
-
-@media (max-width: 30em) {
-  .the-gig {
-    display: block; } }
-
-.portfolio {
-  background-color: #FFFBF2;
-  padding: 12rem 0;
-  overflow: hidden;
-  position: relative; }
-  .portfolio h2, .portfolio p {
-    z-index: 1;
-    max-width: 455px; }
-
-.cool-blobs {
-  z-index: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  display: block;
-  background-image: url("../images/blobs.svg");
-  background-position-x: right;
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.stack-container {
-  z-index: 1;
-  overflow: scroll;
-  width: 100%;
-  -ms-overflow-style: none; }
-  .stack-container::-webkit-scrollbar {
-    display: none; }
-
-.stack-of-work {
-  z-index: 1;
+.grid-of-things {
   display: flex;
-  flex-direction: row;
-  position: relative;
-  list-style: none;
-  margin-top: 6.4rem;
-  padding: 0;
-  margin-left: 6.4rem;
-  min-width: 100%;
-  width: 1200px; }
-  @media (max-width: 30em) {
-    .stack-of-work {
-      margin-left: 1.4rem;
-      width: 930px; } }
-
-.case-study-preview {
-  background-color: white;
-  border-radius: 8px;
-  max-width: 360px;
-  margin-right: 3.6rem;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-  display: inline-block;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .case-study-preview:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  @media (max-width: 30em) {
-    .case-study-preview {
-      max-width: 280px;
-      margin-right: 2.1rem; } }
-
-.case-study-image {
-  height: 20.5rem;
-  background-color: gray;
-  margin: 0;
-  background-size: cover; }
-  @media (max-width: 30em) {
-    .case-study-image {
-      height: 16rem; } }
-  .case-study-image.territory {
-    background-color: #FAF6ED;
-    background-image: url("../images/territory-preview.png"); }
-  .case-study-image.ps-expansion {
-    background-color: #0C8AA5;
-    background-image: url("../images/preview-ps-expansion.png"); }
-  .case-study-image.ps-food {
-    background-color: #0C8AA5;
-    background-image: url("../images/preview-ps-food.png"); }
-  .case-study-image.apk {
-    background-color: #2F80ED;
-    background-image: url("../images/apk-preview.png"); }
-
-.case-study-content {
-  padding: 3rem; }
-  @media (max-width: 30em) {
-    .case-study-content {
-      padding: 2rem; } }
-  .case-study-content h3 {
-    font-size: 2.4rem; }
-    @media (max-width: 30em) {
-      .case-study-content h3 {
-        font-size: 1.8rem; } }
-  .case-study-content a {
-    color: #E91F64;
-    font-weight: 500; }
-  @media (max-width: 30em) {
-    .case-study-content h5 {
-      font-size: 1rem; } }
-  @media (max-width: 30em) {
-    .case-study-content p {
-      font-size: 1.3rem; } }
-  @media (max-width: 30em) {
-    .case-study-content button {
-      font-size: 1.3rem; } }
-
-.adventures {
-  background-color: #fafafa;
-  padding: 12rem 0;
-  overflow: hidden;
-  position: relative; }
-  .adventures h2, .adventures p {
-    z-index: 1;
-    max-width: 455px; }
-
-.stack-of-adventures {
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  list-style: none;
-  margin-top: 6.4rem;
-  padding: 0;
-  margin-left: 6.4rem;
-  min-width: 100%;
-  width: 4860px; }
-  @media (max-width: 30em) {
-    .stack-of-adventures {
-      margin-left: 2.4rem;
-      width: 2520px; } }
-
-.adventure-card {
-  display: flex;
+  flex-flow: row wrap;
   justify-content: flex-start;
+  align-items: flex-start; }
+
+.half-of-grid {
+  display: flex;
+  width: 50%;
+  flex-flow: column; }
+  @media (max-width: 30em) {
+    .half-of-grid {
+      width: 100%; } }
+
+.thing-card {
   background-color: white;
-  width: 520px;
-  margin-right: 3.6rem;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .adventure-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  padding: 6.4rem;
+  width: 92%;
+  margin-bottom: 8%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05); }
   @media (max-width: 30em) {
-    .adventure-card {
-      max-width: 240px;
-      flex-direction: column; } }
+    .thing-card {
+      margin: 3% auto;
+      padding: 4.4rem 3.2rem 3.2rem; } }
 
-.adventure-image {
-  height: 100%;
-  width: 100%;
-  max-width: 16rem;
-  background-color: lightGray;
-  margin: 0;
-  background-size: cover;
-  background-position: center center; }
-  @media (max-width: 30em) {
-    .adventure-image {
-      height: 16rem;
-      max-width: 100%; } }
-  .adventure-image.ux-book {
-    background-color: #FF8964;
-    background-image: url("../images/ux-book-preview.png"); }
-  .adventure-image.designers-hearth {
-    background-color: #ED1C40;
-    background-image: url("../images/meetup-preview.png"); }
-  .adventure-image.seishin {
-    background-color: #F6C70B;
-    background-image: url("../images/adventure-seishin.png"); }
-  .adventure-image.kale {
-    background-color: #24B47D;
-    background-image: url("../images/kale-preview.png"); }
-  .adventure-image.apk {
-    background-color: #2F80ED;
-    background-image: url("../images/apk-preview.png"); }
-  .adventure-image.culture-camp {
-    background-color: #FF9D34;
-    background-image: url("../images/adventure-culture-camp.png"); }
-  .adventure-image.chef-club {
-    background-color: #BD1833;
-    background-image: url("../images/adventure-chef-club.png"); }
-  .adventure-image.cor {
-    background-color: #21A5D5;
-    background-image: url("../images/adventure-cor.png"); }
-  .adventure-image.frc-talent {
-    background-color: #03E7B0;
-    background-image: url("../images/adventure-frc-talent.png"); }
-  .adventure-image.sohelpful {
-    background-color: #F48854;
-    background-image: url("../images/adventure-sohelpful.png"); }
+.capabilities-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  line-height: 2.4; }
 
-.adventure-content {
-  padding: 2rem; }
-  .adventure-content h3 {
-    font-size: 1.8rem; }
-  .adventure-content p {
-    font-size: 1.3rem;
-    margin-bottom: .5em; }
-  .adventure-content a {
-    font-size: 1.3rem;
-    color: #E91F64;
-    font-weight: 500;
-    margin-bottom: 0; }
+.team-list {
+  list-style: none;
+  padding-left: 0; }
 
-.contact {
-  background-color: #95C82E;
-  padding: 18rem 0;
-  position: relative; }
-
-.a-floating-card-maybe-what-do-you-think-this-is-omg {
-  background-color: white;
-  padding: 4.8rem;
-  width: 100%;
-  max-width: 470px;
-  margin: 0 auto;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.15);
-  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  @media (max-width: 30em) {
-    .a-floating-card-maybe-what-do-you-think-this-is-omg {
-      padding: 2.4rem; } }
-  .a-floating-card-maybe-what-do-you-think-this-is-omg:hover {
-    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.15), 0px 3px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-
-.me-on-the-web {
-  margin-top: 4.8rem; }
-  @media (max-width: 30em) {
-    .me-on-the-web {
-      padding-left: 1em; } }
-  .me-on-the-web li {
-    margin-bottom: .5em; }
-
-.footer-footer-footer {
-  text-align: center;
-  font-size: 1.2rem;
-  position: absolute;
-  bottom: 1em;
-  width: 100%;
-  color: #5B7A1C; }
-  .footer-footer-footer a {
-    color: #5B7A1C; }
-  .footer-footer-footer a:hover {
-    color: rgba(45, 35, 51, 0.8); }
-
-.fab {
-  width: 56px;
-  height: 56px;
-  border: none;
-  border-radius: 50%;
-  background-color: #E91F64;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .fab:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.15);
-    background-color: #ec3b77;
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .fab:active {
-    outline: none;
-    box-shadow: none;
-    background-color: #d91558;
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-
-.button-link {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #E91F64;
-  text-decoration: underline;
-  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .button-link:hover {
-    color: #2D2333;
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-
-.icon {
-  position: relative;
+.team-item {
   display: block;
-  width: 24px;
-  height: 24px;
-  background-position: center center;
-  background-repeat: no-repeat; }
-  .icon.icon-back {
-    left: 7px;
-    background-size: 15px 24px;
-    background-image: url("../images/icon-back.png"); }
+  margin-left: -1.8rem;
+  margin-bottom: 2.2rem; }
 
-.project-page {
-  background-color: white; }
+.team-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .team-link:hover {
+    background-color: rgba(104, 44, 244, 0.04);
+    text-decoration: none;
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
 
-.project-title {
-  font-size: 2.8em;
-  line-height: 1.2;
-  text-align: center; }
-
-.project-page h4 {
-  font-size: 1em;
-  font-weight: bold;
-  font-family: "Inter UI", "San Francisco", "Roboto", "Droid Sans", sans-serif;
-  line-height: 1.54;
-  margin-top: 2em; }
-
-.image-subtext {
-  font-size: .8em;
-  font-style: italic;
-  color: #637282;
-  text-align: center; }
-
-.project-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.avatar {
+  display: block;
+  width: 54px;
   height: 54px;
-  background-color: rgba(255, 255, 255, 0.92);
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
-  z-index: 7; }
-  .project-nav .project-meta {
-    margin-bottom: 0;
-    position: relative;
-    top: 1em;
-    left: 6em; }
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-bottom: 0;
+  margin-right: 2.1rem; }
 
-.project-nav .fab {
-  position: fixed;
-  top: 25px;
-  left: 2em; }
+.team-person {
+  margin-bottom: 0; }
 
-.project-page-header {
+.footer {
   position: relative;
-  top: -108px;
+  margin-top: 8.8rem;
   width: 100%;
-  height: 360px;
-  margin-bottom: 10em; }
-  @media (max-width: 30em) {
-    .project-page-header {
-      margin-bottom: 0;
-      height: inherit; } }
-  .project-page-header.territory {
-    background-color: #FAF6ED; }
-  .project-page-header.ps-expansion {
-    background-color: #1598B3;
-    background-image: -webkit-linear-gradient(45deg, rgba(65, 220, 220, 0.8) 0%, rgba(30, 135, 169, 0.4) 100%);
-    background-image: linear-gradient(45deg, rgba(65, 220, 220, 0.8) 0%, rgba(30, 135, 169, 0.4) 100%); }
-  .project-page-header.ps-food {
-    background-color: #1598B3;
-    background-image: -webkit-linear-gradient(45deg, rgba(65, 220, 220, 0.8) 0%, rgba(30, 135, 169, 0.4) 100%);
-    background-image: linear-gradient(45deg, rgba(65, 220, 220, 0.8) 0%, rgba(30, 135, 169, 0.4) 100%); }
-  .project-page-header img {
-    position: relative;
-    top: 108px; }
-
-.project-content {
-  padding-top: 108px;
-  min-height: 1000px; }
-  .project-content h3 {
-    margin-top: 3em; }
-
-.mini-study-notice {
-  padding: 1em;
-  border-radius: 4px;
-  background-color: #fffee0;
-  text-align: center;
-  font-size: .8em;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.05); }
-
-.objectives {
-  padding-left: 1em;
-  border-left: 4px solid #E91F64; }
-
-.project-footer {
-  margin-top: 54px;
-  border-top: 2px solid #F0F0F0;
-  padding-top: 54px;
-  padding-bottom: 54px; }
-  .project-footer button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-weight: bold; }
-    .project-footer button:hover {
-      text-decoration: underline; }
-
-.carousel-title {
-  margin-top: 4em;
-  font-family: "Inter UI", "San Francisco", "Roboto", "Droid Sans", sans-serif;
-  font-weight: 900;
-  font-size: 15px;
-  color: #AAAAAA;
-  text-transform: uppercase;
-  padding-left: 4%; }
-
-.carousel-wrap {
-  width: 100%;
-  overflow-x: scroll;
-  padding-left: 4%; }
-
-.carousel-container {
-  width: 1380px;
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .carousel-container li {
-    display: inline-block; }
-
-.source-shot {
-  position: relative;
+  background-color: white;
   display: block;
-  top: 0;
-  margin: 0 1.5em 0 0;
-  background-color: #E5E5E5;
-  border: none;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .source-shot:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-
-.wip-shots .source-shot {
-  width: 400px;
-  height: 300px; }
-
-.product-shots .source-shot {
-  width: 267px;
-  height: 267px; }
+  height: 100px; }
 
 /*# sourceMappingURL=styles.css.map */

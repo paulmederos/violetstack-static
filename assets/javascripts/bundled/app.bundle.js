@@ -21264,12 +21264,12 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "li",
                 null,
-                "\uD83D\uDCDD  Content Production"
+                "\uD83D\uDCF1  Web & Mobile Development"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "li",
                 null,
-                "\uD83D\uDCF1  Software Engineering"
+                "\uD83D\uDCD0  Backend/Data Engineering"
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "li",

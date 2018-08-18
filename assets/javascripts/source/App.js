@@ -33,8 +33,8 @@ export default class App extends React.Component {
               <ul className="capabilities-list">
                 <li>🗣  Research + Brand Strategy</li>
                 <li>🎨  Digital Design</li>
-                <li>📝  Content Production</li>
-                <li>📱  Software Engineering</li>
+                <li>📱  Web & Mobile Development</li>
+                <li>📐  Backend/Data Engineering</li>
                 <li>📈  Marketing + Activation</li>
                 <li>⚡️  Startup Coaching</li>
               </ul>

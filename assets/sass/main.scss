@@ -327,6 +327,7 @@ figure {
   @include mq-tablet {
     width: 120px;
     height: 36px;
+    background-size: 120px 36px;
   }
 
   @include mq-personal {
@@ -466,15 +467,29 @@ figure {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  @include mq-personal {
+    height: auto;
+    flex-direction: column;
+  }
 }
 
 .footer-copy {
   margin-right: auto;
   margin-bottom: 0;
   padding-left: 4%;
+
+  @include mq-personal {
+    padding: 1.2rem 3%;
+    margin: .5rem auto 0;
+  }
 }
 
 .footer-button {
   margin-left: auto;
   padding-right: 4%;
+  @include mq-personal {
+    padding: 2.4rem 3%;
+    margin: 0 auto;
+  }
 }

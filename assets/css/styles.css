@@ -1641,7 +1641,8 @@ figure {
   @media (max-width: 54em) {
     .logo-mark {
       width: 120px;
-      height: 36px; } }
+      height: 36px;
+      background-size: 120px 36px; } }
   @media (max-width: 30em) {
     .logo-mark {
       margin: 32px auto 64px; } }
@@ -1759,14 +1760,26 @@ figure {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center; }
+  @media (max-width: 30em) {
+    .footer {
+      height: auto;
+      flex-direction: column; } }
 
 .footer-copy {
   margin-right: auto;
   margin-bottom: 0;
   padding-left: 4%; }
+  @media (max-width: 30em) {
+    .footer-copy {
+      padding: 1.2rem 3%;
+      margin: .5rem auto 0; } }
 
 .footer-button {
   margin-left: auto;
   padding-right: 4%; }
+  @media (max-width: 30em) {
+    .footer-button {
+      padding: 2.4rem 3%;
+      margin: 0 auto; } }
 
 /*# sourceMappingURL=styles.css.map */

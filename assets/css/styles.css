@@ -3,27 +3,27 @@
  ========================================================================== */
 @font-face {
   font-family: 'Source Sans Pro';
-  src: font-url("./assets/webfonts/SourceSansPro-Regular.otf") format("opentype");
+  src: font-url("./assets/webfonts/SourceSansPro-Regular.ttf") format("opentype");
   font-weight: 500;
   font-style: normal; }
 @font-face {
   font-family: 'Source Sans Pro';
-  src: font-url("./assets/webfonts/SourceSansPro-Italic.otf") format("opentype");
+  src: font-url("./assets/webfonts/SourceSansPro-Italic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic; }
 @font-face {
   font-family: 'Source Sans Pro';
-  src: font-url("./assets/webfonts/SourceSansPro-Semibold.otf") format("opentype");
+  src: font-url("./assets/webfonts/SourceSansPro-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 @font-face {
   font-family: 'Source Sans Pro';
-  src: font-url("./assets/webfonts/SourceSansPro-Bold.otf") format("opentype");
+  src: font-url("./assets/webfonts/SourceSansPro-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: 'Source Sans Pro';
-  src: font-url("./assets/webfonts/SourceSansPro-Black.otf") format("opentype");
+  src: font-url("./assets/webfonts/SourceSansPro-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -1442,7 +1442,7 @@ p, ul, ol, dl {
   font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
   margin: 0 0 1.8em 0;
   line-height: 1.54;
-  font-weight: 300; }
+  font-weight: 500; }
 
 ol, ul {
   padding-left: 2.5em; }
